@@ -15,7 +15,6 @@
 <script src="./threejs/OrbitControls.js"></script>
 <script src="./threejs/ViewHelper.js"></script>
 <script src="./proj4js/proj4.js"></script>
-<script src="./tweenjs/tween.js"></script>
 <script src="./Qgis2threejs.js"></script>
 </head>
 <body>
@@ -97,9 +96,28 @@
 </div>
 
 <!-- header and footer -->
-<div id="header"><h1>Mariana Trench</h1> 
-<br><img src="Globe.png" style="width: 100px; height: auto;" alt="Western Pacific Ocean"><br></div>
-<div id="footer"><p style="background-color:#fafafa;">Zoom and rotate with click and hold.</p></div>
+<div id="header"><div style="display: flex; justify-content: space-between; align-items: center;">
+  <div>
+    <h2 style="margin: 0 0 0.2em 0;">Seabed bordering the Mariana Trench</h2>
+    <h3 style="margin: 0;">identified as another potential site for offshore critical mineral mining</h3>
+  </div>
+
+  <!-- Third PNG aligned to the right -->
+  <img src="Logo.png" 
+       alt="Logo" 
+       style="width: 25px; height: auto; margin-left: 25em;">
+</div>
+
+<br>
+<br>
+<br>
+<img src="Scale.png" style="width: 140px; height: auto;" alt="Scale bar"><br>
+</div>
+<div id="footer"><div style="margin-left: 40px;">
+  <img src="Globe.png" style="width: 60px; height: auto;" alt="Western Pacific Ocean">
+  <br><br>
+  <p style="background-color:#fafafa;">Zoom and rotate with click and hold.</p>
+</div></div>
 
 <!-- layer panel -->
 <div id="layerpanel">
@@ -117,11 +135,8 @@
 <script>
 Q3D.Config.allVisible = true;
 Q3D.Config.coord.latlon = true;
-Q3D.Config.viewpoint = {lookAt:{x:-7211083.113410629,y:1670212.4684456864,z:7.496262567190691e-13},pos:{x:-7114112.112688442,y:626021.6748108283,z:114819.70102620749}};
+Q3D.Config.viewpoint = {lookAt:{x:-7168328.331675108,y:1981618.9351370553,z:0},pos:{x:-7168328.331675108,y:1981616.6066493762,z:291048.0230252866}};
 Q3D.Config.localMode = true;
-Q3D.Config.animation.enabled = true;
-Q3D.Config.northArrow.enabled = true;
-Q3D.Config.northArrow.color = 0x0a2f29;
 
 var container = document.getElementById("view"),
     app = Q3D.application,
