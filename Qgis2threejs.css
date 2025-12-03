@@ -482,3 +482,13 @@ table.measure tr > td:nth-child(2) {
 .nextbtn::before {
   content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMzYuNyAxOC4yIDY4LjUgNTAgMzYuNyA4MS44IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS13aWR0aD0iMTQiIGZpbGw9Im5vbmUiIGNsYXNzPSJsYXllciIvPjwvc3ZnPg==");
 }
+
+/* Override for small / medium screens */
+@media (max-width: 900px) {
+  #narrativebox {
+    max-width: 100%;
+    width: calc(100% - 16px);  /* small side padding */
+    left: 8px;
+    right: 8px;
+  }
+}
